@@ -5,19 +5,22 @@ default: &default
 
 development:
   <<: *default
+  adapter: postgresql 
+  encoding: unicode
   database: rockstar2_development
-  username: rockstar2
+  pool: 5
+  username: feanor
   password: tu_password
   host: localhost
-  port: 5432
+  port: 5433
 
 test:
   <<: *default
   database: rockstar2_test
-  username: rockstar2
+  username: feanor
   password: tu_password
   host: localhost
-  port: 5432
+  port: 5433
 
 production:
   primary: &primary_production
